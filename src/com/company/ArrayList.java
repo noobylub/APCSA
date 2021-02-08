@@ -2,36 +2,61 @@
 package com.company;
 //THe way to import an array list
 import  java.util.ArrayList;
-class Person{
+class Car{
     int age;
-    String gender;
     String name;
-    public Person(int age, String gender, String name){
-        this.age = age;
-        this.gender = gender;
+    public Car( String name, int age){
         this.name = name;
+        this.age = age;
     }
-    public int getAge(){
-        return this.age;
-    }
-    public String getGender(){
-        return this.gender;
-    }
-    public String getName(){
-        return this.name;
-    }
+
+
 
 }
 class  arrayList{
     public static void main(String[] args){
         //arraylist is mutable, it can be changed
         //First import the arraylist, the imported class like a scanner
-        Person Muhammad = new Person(16,"male","Muhammad");
-        Person Loka = new Person(18, "Female", "Loka");
-        ArrayList<Person> Group1 = new ArrayList<Person>();
-        Group1.add(Loka);
-        Person Kolo = new Person(54,"male", "Kola");
-        Group1.add(Kolo);
+        Car Bumblebee = new Car("Camaro Yello",4);
+        Car Honda = new Car("Honda City",4);
+        ArrayList<Car> CarGarage = new ArrayList<Car>();
+        CarGarage.add(Bumblebee);
+        CarGarage.add(Honda);
+        for(Car xy: CarGarage){
+            System.out.print(xy.name);
+        }
+        //Integers
+        ArrayList<Integer> buncOfNo = new ArrayList<Integer>();
+        buncOfNo.add(68);
+        buncOfNo.add(410);
+        buncOfNo.add(59);
+        System.out.println(buncOfNo);
+        buncOfNo.remove(0);
+        System.out.println(buncOfNo);
+
+        //List of Strings
+        ArrayList<String> ingredients = new ArrayList<String>();
+        ingredients.add("Oniond");
+        ingredients.add("Chicken");
+        ingredients.add("Water");
+
+        System.out.println(ingredients);
+        ingredients.set(1,"Beef");
+        System.out.println(ingredients);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -61,15 +86,21 @@ class  arrayList{
 
         //add(int index, object 0);
 
-        //get(int index);
+        firstArrayList.set(2,56);
+
+        //get(int index) returns the one at the index, or gets it
+
 
         //remove(int index);
-        firstArrayList.remove(0);
-        System.out.println(firstArrayList.get(0));
+        System.out.println(firstArrayList);
+        int y = firstArrayList.remove(0);
+        //The remove method returns
+        System.out.println(y);
 
-        for(int x:firstArrayList){
-            System.out.println("Number" + x);
-        }
+
+
+
+
 
     }
 }
