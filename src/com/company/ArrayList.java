@@ -1,6 +1,8 @@
 
 package com.company;
 //THe way to import an array list
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import  java.util.ArrayList;
 class Car{
     int age;
@@ -43,6 +45,23 @@ class  arrayList{
         System.out.println(ingredients);
         ingredients.set(1,"Beef");
         System.out.println(ingredients);
+        //Booleans
+        ArrayList<Boolean>MaleOrNot = new ArrayList<Boolean>();
+        MaleOrNot.add(false);
+        MaleOrNot.add(true);
+        System.out.println(MaleOrNot);
+        MaleOrNot.remove(0);
+        MaleOrNot.remove(0);
+        System.out.println(MaleOrNot.isEmpty());
+        //List of characters
+        ArrayList<Character> chars = new ArrayList<Character>();
+        chars.add('f');
+        chars.add('u');
+        System.out.println(chars);
+        chars.add('n');
+        System.out.println(chars);
+
+
 
 
 
