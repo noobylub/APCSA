@@ -24,15 +24,40 @@ class SA23{
         }
         return TwoDArray;
     }
+    public int[][] method3(int[][] TwoDArray){
+        int[][] Other2DArray = new int[TwoDArray.length][];
+        for(int x=0;x<Other2DArray.length;x++){
+            int[] array = new int[x*2];
+            for(int y=0;y<array.length;y++){
+                if(y%2!=0){
+                    array[y] =0;
+                }
+                else if(y%2==0){
+                    array[y]= TwoDArray[x][y/2];
+                }
+            }
+            Other2DArray[x] = array;
+        }
+        return Other2DArray;
+    }
+    public int[] method4(int[][] TwoDArray){
+        int[] h = new int[TwoDArray.length];
+        for(int x=0;x< TwoDArray.length;x++){
+            int sum = 0;
+            for(int y=0;y< TwoDArray[x].length;y++){
+                sum+=TwoDArray[y][x];
+            }
+            h[x] = sum;
+        }
+        return h;
+    }
 
     public static void main(String[] args){
-
-        SA23 methods = new SA23();
-        for(int x[]:methods.method2(4)){
-            System.out.println(" ");
-            for(int y:x){
-                System.out.print(y);
-            }
+    SA23 n = new SA23();
+    int[][] h = {{4,5,6},{4,3,4}};
+    int[] hk = n.method4(h);
+        for(int x:hk){
+            System.out.println(x);
         }
     }
 }
