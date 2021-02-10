@@ -118,7 +118,9 @@ class  arrayList{
 
 
 
-
+        //Multiple data types
+        ArrayList a = new ArrayList();
+        a.add("Hello");
 
 
     }
