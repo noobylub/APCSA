@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 class SA24MAIN{
     public ArrayList method1(ArrayList<Character> array){
-        System.out.println(array);
-        for(int i=0;i< array.size();i+=2){
-            System.out.print(i);
+        //I dont get this, for some reason the max is lower, I dont know why
+        // and the counte is not adding by 2
+        for(int i=0;i<array.size();i+=2){
             array.remove(i);
         }
         return array;
@@ -42,12 +42,11 @@ class SA24MAIN{
     public static void main(String[] args){
         SA24MAIN methods = new SA24MAIN();
         ArrayList<Character> charo = new ArrayList<Character>();
-        charo.add('1');
-        charo.add('2');
-        charo.add('3');
-        charo.add('4');
-        charo.add('5');
-        charo.add('6');
+        charo.add('a');
+        charo.add('b');
+        charo.add('c');
+        charo.add('d');
+        charo.add('e');
 
         System.out.println(methods.method1(charo));
         System.out.println(" ");
