@@ -12,7 +12,9 @@ class SA24MAIN{
         return array;
     }
     public ArrayList method2(ArrayList<String> array){
+        //create new arraylist 
         ArrayList<String> ToReturn = new ArrayList<String>();
+        //iterate backward and put it into new array
         for(int i=array.size()-1;i>=0;i--){
             ToReturn.add(array.get(i));
         }
@@ -20,19 +22,23 @@ class SA24MAIN{
     }
     public ArrayList method3(ArrayList<Double> array){
         for(int i=0;i<array.size();i++){
+            //iterate through and multiply each one 
             array.set(i, array.get(i)*2);
         }
         return array;
     }
     public ArrayList method4(int max){
         ArrayList<Character> toReturn = new ArrayList<Character>();
+        //add the first letter 
         char content = 'a';
         toReturn.add(content);
         for(int x=1;x<max;x++){
+            //then if divisible by 2 add in the beggining 
             content++;
             if(x%2==0){
                 toReturn.add(0,content);
             }
+            //if not add in the end
             else if(x%2!=0){
                 toReturn.add(content);
             }
@@ -40,6 +46,7 @@ class SA24MAIN{
         return toReturn;
     }
     public static void main(String[] args){
+        //all just testing
         SA24MAIN methods = new SA24MAIN();
         ArrayList<Character> charo = new ArrayList<Character>();
         charo.add('a');
