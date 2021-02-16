@@ -60,6 +60,7 @@ class SA25{
         return toReturn;
     }
 
+
     public static void main(String[] args){
         //All for testign
         SA25 methods = new SA25();
