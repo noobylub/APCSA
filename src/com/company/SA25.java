@@ -59,6 +59,16 @@ class SA25{
         }
         return toReturn;
     }
+    public ArrayList minimum(ArrayList<Double> arrayToSort ){
+        ArrayList<Double> sorted = new ArrayList<>();
+        double min = arrayToSort.get(0);
+        for(int x=0;x<arrayToSort.size();x++){
+            for(int y=x+1;x<arrayToSort.size();y++){
+                
+            }
+        }
+        return sorted;
+    }
 
 
     public static void main(String[] args){
@@ -71,7 +81,6 @@ class SA25{
         hello.add(-3.54);
         hello.add(43.2);
         System.out.println(methods.reversed(hello));
-        System.out.println(methods.posneg(hello));
-        methods.sortBetween(hello);
+        System.out.println(methods.minimum(hello));
     }
 }
