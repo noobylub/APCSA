@@ -78,9 +78,9 @@ class SA26{
         }
         return GCD;
     }
-    public double multipleGCD(ArrayList<Integer> helo){
-
-    }
+//    public double multipleGCD(ArrayList<Integer> helo){
+//
+//    }
     public static void main(String[] args){
         SA26 method = new SA26();
         System.out.println(method.method1("Hell is where.We do not want to go"));
