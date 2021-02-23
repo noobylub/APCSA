@@ -69,18 +69,32 @@ class SA26{
         }
         return binary;
     }
-    public double GCD(int x, int y){
+    public double GCD(double x, double y){
         int GCD = -1;
-        for(int i=1;i<x&&i<y;i++){
+        for(int i=1;i<=x&&i<=y;i++){
             if(x%i==0&&y%i==0){
                 GCD = i;
             }
         }
         return GCD;
     }
-//    public double multipleGCD(ArrayList<Integer> helo){
-//
-//    }
+    public double multipleGCD(ArrayList<Double> helo){
+        boolean keepgoing = true;
+        while(keepgoing){
+            if(helo.size()==1){
+                keepgoing=false;
+            }
+            else{
+                System.out.println(helo);
+                helo.set(0, GCD(helo.get(0),helo.get(1)));
+                helo.remove(1);
+            }
+
+        }
+        System.out.println(helo);
+        return 1;
+
+    }
     public static void main(String[] args){
         SA26 method = new SA26();
         System.out.println(method.method1("Hell is where.We do not want to go"));
@@ -107,7 +121,13 @@ class SA26{
         x.add(true);
         x.add(false);
         System.out.println( method.convertBinary(x));
-        System.out.println(method.GCD(36,42));
+        ArrayList<Double> k = new ArrayList<>();
+        k.add(64.0);
+        k.add(16.0);
+        k.add(72.0);
+        k.add(40.0);
+        method.multipleGCD(k);
+
 
 
     }
