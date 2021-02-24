@@ -8,10 +8,12 @@ class SA26{
     public ArrayList<ArrayList> method1(String str){
 
         ArrayList<ArrayList> toReturn = new ArrayList<>();
+        //Splits the array first, the insert them into an arraylist
         String[] splitted = str.split("\\.");
         for(int i=0;i< splitted.length;i++){
 
             ArrayList<String> toPutInto = new ArrayList<>();
+            //Splits up the words within and inserts them to array that is within another array lsit
             String[] finalSplit = splitted[i].split(" ");
             for(int j=0;j< finalSplit.length;j++){
 
@@ -23,6 +25,7 @@ class SA26{
         return toReturn;
     }
     public ArrayList<String> sorting (ArrayList<String> strArr){
+        //Basically seleciton sort but with the first character of the array list
         for(int i=0;i<strArr.size();i++){
            int minIndex = i;
            for(int j=i;j<strArr.size();j++){
@@ -40,9 +43,11 @@ class SA26{
     }
     public ArrayList<Integer> frequency(ArrayList<Integer> intarr){
         ArrayList<Integer> toReturn = new ArrayList<>();
+        //checks an element firts
         for(int i=0;i<intarr.size();i++){
             int element = intarr.get(i);
             int count = 0;
+            //another iterations that counts the frequency, and add it to the array
             for(int j=0;j<intarr.size();j++){
                 if(element == intarr.get(j)){
                     count++;
@@ -53,6 +58,7 @@ class SA26{
         return toReturn;
     }
     public double convertBinary(ArrayList<Boolean> bool){
+        //method to get either 0 or 1
         double binary = 0;
         ArrayList<Integer> bin = new ArrayList<>();
         for(boolean x:bool){
@@ -64,12 +70,16 @@ class SA26{
             }
         }
         System.out.println("The binary is:" + bin);
+        //the the binary
+        //Where I learned binary https://www.rapidtables.com/convert/number/binary-to-decimal.html
+        //But basically iterate through and apply equation and add it into there
         for(int i=0;i<bin.size();i++){
             binary+=bin.get(i)*Math.pow(2, (bin.size()-1)-i);
         }
         return binary;
     }
     public double GCD(double x, double y){
+        //Gets the GCD
         int GCD = -1;
         for(int i=1;i<=x&&i<=y;i++){
             if(x%i==0&&y%i==0){
@@ -91,8 +101,7 @@ class SA26{
             }
 
         }
-        System.out.println(helo);
-        return 1;
+        return helo.get(0);
 
     }
     public static void main(String[] args){
@@ -126,7 +135,7 @@ class SA26{
         k.add(16.0);
         k.add(72.0);
         k.add(40.0);
-        method.multipleGCD(k);
+        System.out.println(method.multipleGCD(k));
 
 
 
