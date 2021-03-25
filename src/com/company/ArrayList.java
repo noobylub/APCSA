@@ -1,7 +1,7 @@
 
 package com.company;
 //THe way to import an array list
-import com.sun.org.apache.xpath.internal.operations.Bool;
+
 
 import  java.util.ArrayList;
 class Car{
